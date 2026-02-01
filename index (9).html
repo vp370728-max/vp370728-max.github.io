@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo tường lớp 12T1</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #fdeff2, #fff7d6);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 1000px;
+            padding: 8px;
+            border-radius: 12px;
+            border: 3px double #f5b7b1;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .content-wrapper {
+            border: 2px solid #e5e5e5;
+            padding: 30px;
+            border-radius: 8px;
+            background: #fff;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px dashed #f8cdd3;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 34px;
+            letter-spacing: 2px;
+            margin: 0;
+            text-transform: uppercase;
+            background: linear-gradient(to right, #c0392b, #e84393);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-size: 16px;
+            color: #000;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        /* ===== NÚT GIỌNG ĐỌC ===== */
+        .audio-controls {
+            text-align: center;
+            margin: 15px 0 30px;
+        }
+
+        .audio-controls button {
+            padding: 8px 18px;
+            margin: 0 6px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            background: linear-gradient(to right, #74b9ff, #0984e3);
+            color: white;
+        }
+
+        .audio-controls .stop {
+            background: linear-gradient(to right, #ff7675, #d63031);
+        }
+
+        /* ===== PHẦN A & B ===== */
+        .trungthu-box {
+            margin-bottom: 35px;
+            border: 3px solid red;
+            background-color: #eaffea;
+            padding: 20px 25px;
+            border-radius: 15px;
+        }
+
+        .trungthu-box h3 {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: darkred;
+            background: #fff3cd;
+            padding: 8px 22px;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 18px;
+        }
+
+        .trungthu-box p {
+            font-size: 15px;
+            line-height: 1.7;
+            text-align: justify;
+            white-space: pre-line;
+            margin: 0;
+}
+
+        /* ===== MEDIA ===== */
+        .media-container {
+            display: flex;
+            gap: 30px;
+margin-top: 40px;
+        }
+
+        .media-column {
+            flex: 1;
+            text-align: center;
+        }
+
+        .media-column h3 {
+            font-size: 18px;
+            font-weight: bold;
+            background: #fff3cd;
+            padding: 8px 18px;
+            border-radius: 20px;
+            margin: 0 auto 18px;
+            width: fit-content;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid #f8cdd3;
+        }
+
+        .video-wrapper {
+            border-radius: 10px;
+            overflow: hidden;
+            border: 3px solid #ffe8a1;
+            background: #000;
+        }
+
+        video {
+            width: 100%;
+            max-height: 300px;
+        }
+
+        /* ===== BÌNH LUẬN ===== */
+        footer {
+            margin-top: 45px;
+            background: #fdeff2;
+            padding: 22px;
+            border-radius: 12px;
+            border: 2px dashed #f5b7b1;
+        }
+
+        footer h3 {
+            margin-top: 0;
+            font-size: 17px;
+            text-align: center;
+        }
+
+        .form-group {
+            display: flex;
+            margin-bottom: 12px;
+        }
+
+        .form-group label {
+            width: 110px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            flex: 1;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button.send {
+            margin-left: 110px;
+            padding: 8px 24px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(to right, #e17055, #e84393);
+            color: white;
+            cursor: pointer;
+        }
+
+        /* ===== LIÊN HỆ ===== */
+        .contact-box {
+            margin-top: 30px;
+            border: 3px solid #f39c12;
+            background: #fffbea;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: left;
+        }
+
+        .contact-box h3 {
+            margin-top: 0;
+            color: #c0392b;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .media-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="main-container">
+    <div class="content-wrapper">
+
+        <header>
+            <h1>Đêm Hội Trăng Rằm</h1>
+            <h2>Báo tường lớp 12T1 – Kỉ niệm đêm Trung Thu</h2>
+        </header>
+
+        <!-- PHẦN A -->
+<section class="trungthu-box" id="phanA">
+            <h3>Phần A. Quá trình chuẩn bị</h3>
+            <p>
+Bước vào quá trình thực hiện đêm Trung Thu . Tập thể lớp em đã có sự chuẩn bị và lên kế hoạch từ trước .                                 
+<p>Bước đầu là chuẩn bị đồ trang trí đêm trung thu sau đó là cùng nhau vẽ bảng . </p>
+Cuối cùng là chuẩn bị các món ăn để phục vụ đêm rước trăng .                                
+<p>Vào đêm rước trăng tập thể lớp em và thầy chủ nhiệm đã có những phút giây hạnh phúc và quây quần bên nhau . </p>
+Chúng em cùng vui chơi , ca hát , ăn uống  . Sau đó là cùng nhau tâm sự và ca hát khi ngồi dưới mái trường thân yêu .
+            </p>
+        </section>
+
+        <!-- PHẦN B -->
+        <section class="trungthu-box" id="phanB">
+            <h3>Phần B. Khoảnh khắc rước trăng</h3>
+            <p>
+<p>Gắn kết tình bạn</p>
+Giữa những ngày cuối cấp hối hả, đêm Trung thu là khoảng lặng để cả lớp xích lại gần nhau. Dưới ánh đèn lồng lung linh, những miếng bánh chia đôi và tiếng cười rộn rã đã dệt nên một kỷ niệm ấm áp, khó quên dưới mái trường này.
+<p>Gửi gắm ước nguyện</p>
+Dưới ánh trăng rằm, 12T1 cùng gửi gắm những hoài bão về tương lai. Cầu chúc cho tình bạn chúng mình mãi sáng, mọi dự định đều thành công rực rỡ. Dù mai này có đi xa, ký ức về đêm hội hôm nay sẽ luôn là hành trang quý giá nhất.
+            </p>
+        </section>
+
+        <!-- MEDIA -->
+        <section class="media-container">
+            <div class="media-column">
+                <h3>Hình ảnh</h3>
+                <div class="photo-grid">
+                    <img src="img1.jpg">
+                    <img src="img2.jpg">
+                    <img src="img3.jpg">
+                    <img src="img4.jpg">
+                </div>
+            </div>
+
+            <div class="media-column">
+                <h3>Video Kỷ Niệm</h3>
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="video.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- BÌNH LUẬN -->
+    <footer>
+        <h3>Bình luận</h3>
+
+        <div class="form-group">
+            <label>Tên:</label>
+            <input type="text">
+        </div>
+
+        <div class="form-group">
+            <label>Email:</label>
+            <input type="email">
+        </div>
+
+        <div class="form-group">
+            <label>Cảm nghĩ:</label>
+<textarea rows="3"></textarea>
+        </div>
+
+        <button class="send" onclick="alert('Gửi bình luận thành công!')">Gửi</button>
+    </footer>
+
+    <!-- LIÊN HỆ -->
+<div class="contact-box">
+        <h3>Thông tin liên hệ</h3>
+        <p>© 2026 Nhóm 7 – Lớp 12T1</p>
+        <p>Thành viên: Phan Gia Lương, Phan Thị Thùy Trang, Ngô Hoàng Trọng Hiếu, Nguyễn Văn Phú Quý, Nguyễn Yến Thư</p>
+        <p>Email: vp370728@gmail.com</p>
+        <p>Ngày: 30/01/2026</p>
+    </div>
+</div>
+
+
+</body>
+</html>
